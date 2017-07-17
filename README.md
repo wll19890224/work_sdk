@@ -49,18 +49,20 @@ D/RongSdk: RongSdk Version : 1.0
 **01:调用收银台**
 
 ```
-RongSdk.receipt(MainActivity.this, "青橙科技订单", "健身房费用", DateUtils.getCurrentDataString(), 1L);
+RongSdk.receipt(MainActivity.this, "青橙科技订单", "健身房费用", DateUtils.getCurrentDataString(), 1L, customerNo, operator);
 ```
 
 >参数说明：
 ```
-    /**
-     * @param context activity
-     * @param title 订单标题
-     * @param details 订单详情
-     * @param orderId 订单ID
-     * @param amount 订单金额，单位分
-     */
+        /**
+         * @param context    activity
+         * @param title      订单标题
+         * @param details    订单详情
+         * @param orderId    订单ID
+         * @param amount     订单金额，单位分
+         * @param customerNo 客户号
+         * @param operator   操作员号
+         */
 ```
 **02:在``onActivityResult``中接收回调**
 ```
