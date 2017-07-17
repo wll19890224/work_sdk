@@ -73,7 +73,7 @@ RongSdk.receipt(MainActivity.this, "青橙科技订单", "健身房费用", Date
     }
 ```
 > requestCode == Constants.RECEIPT_ACTION,不能修改，Constants.RECEIPT_ACTION=1001
-> 返回data,getStringExtra("data")是Json格式的String（例如：{"orderId":"20170717094654",
+> 返回data.getStringExtra("data")是Json格式的String（例如：{"orderId":"20170717094654",
 "tradeFlowId":"20170717094707100001104961","amount":1,"payTime":"20170717094710",
 "tradeType":5,"payType":20}）
 ```
