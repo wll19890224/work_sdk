@@ -73,7 +73,19 @@ RongSdk.receipt(MainActivity.this, "青橙科技订单", "健身房费用", Date
     }
 ```
 > requestCode == Constants.RECEIPT_ACTION,不能修改，Constants.RECEIPT_ACTION=1001
-
+> 返回data,getStringExtra("data")是Json格式的String（例如：{"orderId":"20170717094654",
+"tradeFlowId":"20170717094707100001104961","amount":1,"payTime":"20170717094710",
+"tradeType":5,"payType":20}）
+```
+    /**
+     * @param orderId 外部传入的订单id
+     * @param tradeFlowId 交易流水id
+     * @param amount 订单金额，单位分
+     * @param payTime 交易时间
+     * @param tradeType 交易类型 5- 刷卡支付 10-扫码支付
+     * @param payType 支付类型 10-微信 20-支付宝 30-QQ钱包
+     */
+```
 ## ProGuard
 如果项目使用了混淆，请加入如下代码：
 ```
