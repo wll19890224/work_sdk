@@ -49,7 +49,12 @@ D/RongSdk: RongSdk Version : 1.0
 **01:调用收银台**
 
 ```
-RongSdk.receipt(MainActivity.this, "青橙科技订单", "健身房费用", DateUtils.getCurrentDataString(), 1L, customerNo, operator);
+RongSdk.receipt(MainActivity.this,
+                    "青橙科技订单", "健身房费用",
+                    new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()),
+                    1L,
+                    customerNo,
+                    operator);
 ```
 
 >参数说明：
